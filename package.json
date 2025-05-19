@@ -12,6 +12,7 @@
     "build": "node esbuild.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "sideEffects": false,
   "author": "dev@logstyx.com",
   "license": "ISC",
   "devDependencies": {
@@ -19,9 +20,12 @@
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
-    "react-native": ">=0.65.0"
+    "react-native": ">=0.65.0",
+    "expo-crypto": "^14.1.4",
+    "react-native-simple-crypto": "^0.2.15"
   },
   "dependencies": {
+    "crypto-js": "^4.2.0",
     "logstyx-js-core": "github:devatlogstyx/logstyx-js-core#release"
   }
 }

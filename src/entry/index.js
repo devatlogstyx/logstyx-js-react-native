@@ -3,6 +3,7 @@ import Trackable from "../wrapper/trackable.js";
 import useLogstyx from "logstyx-js-core"
 import ErrorBoundary from "../wrapper/error.boundary.js";
 import { Platform, Dimensions, ErrorUtils } from "react-native";
+import { generateSignature } from "../lib/react-native.js";
 
 export default (options = {}) => {
     let device;
@@ -26,6 +27,7 @@ export default (options = {}) => {
     const instance = useLogstyx({
         ...options,
         device,
+        signatureFunc: generateSignature,
     });
 
     ErrorUtils.setGlobalHandler((error, isFatal) => {

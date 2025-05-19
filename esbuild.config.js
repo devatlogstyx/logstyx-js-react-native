@@ -10,9 +10,11 @@ esbuild.build({
   minify: true,
   sourcemap: false,
   target: ["es2015"],
-  external: ['react', 'react-native'], // ← include react-native here
+  external: ['react', 'react-native', 'react-native-simple-crypto', 'expo-crypto', 'crypto-js'], // ← include react-native here
   loader: {
     '.js': 'jsx',
   },
-  mainFields: ["module", "main"]
+  mainFields: ["module", "main"],
+  resolveExtensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
+
 }).catch(() => process.exit(1));
