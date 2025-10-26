@@ -31,7 +31,7 @@ export default (options = {}) => {
     });
 
     ErrorUtils.setGlobalHandler((error, isFatal) => {
-        instance.send(isFatal ? "critical" : "error", { message: error.message, stack: error.stack });
+        instance.send(isFatal ? "critical" : "error", { error: error.message, stack: error.stack });
     });
 
     instance.Trackable = (n) => {
