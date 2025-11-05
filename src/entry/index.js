@@ -31,7 +31,7 @@ export default (options = {}) => {
     });
 
     ErrorUtils.setGlobalHandler((err, isFatal) => {
-        instance.send(isFatal ? "critical" : "error", {
+        instance.send(isFatal ? "CRITICAL" : "ERROR", {
             title: err?.name || "Unknown Error",
             message: err?.message,
             stack: err?.stack || null
