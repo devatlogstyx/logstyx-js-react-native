@@ -30,8 +30,12 @@ export default (options = {}) => {
         signatureFunc: generateSignature,
     });
 
-    ErrorUtils.setGlobalHandler((error, isFatal) => {
-        instance.send(isFatal ? "critical" : "error", { error: error.message, stack: error.stack });
+    ErrorUtils.setGlobalHandler((err, isFatal) => {
+        instance.send(isFatal ? "critical" : "error", {
+            title: err?.name || "Unknown Error",
+            message: err?.message,
+            stack: err?.stack || null
+        });
     });
 
     instance.Trackable = (n) => {
