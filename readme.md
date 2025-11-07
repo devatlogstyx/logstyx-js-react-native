@@ -14,7 +14,7 @@ This repository contains the `logstyx` SDK tailored for React Native application
 To get started with the `logstyx` SDK, you need to add it as a dependency in your project:
 
 ```bash
-npm install github:devatlogstyx/logstyx-js-react-native
+npm install github:devatlogstyx/logstyx-js-react-native#release
 ```
 
 Ensure you also have React and React Native installed, as they are peer dependencies.
