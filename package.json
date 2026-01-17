@@ -14,7 +14,7 @@
   },
   "sideEffects": false,
   "author": "dev@logstyx.com",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.25.4"
   },
