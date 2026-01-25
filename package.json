@@ -1,6 +1,6 @@
 {
   "name": "logstyx-js-react-native",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "logstyx sdk for react native",
   "exports": {
     ".": "./dist/logstyx-js-react-native.js"
